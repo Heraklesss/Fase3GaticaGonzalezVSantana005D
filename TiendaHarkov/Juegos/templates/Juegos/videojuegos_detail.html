@@ -1,0 +1,53 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<div class="container">
+  <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+    <h1>Tienda Harkov</h1>      
+    <p>Venta de juegos de forma digitales en diferentes plataformas a un precio economico.</p>
+  </div>     
+</div>
+<div class="container">
+
+<div class="container">
+    <h1>VideoJuego Agregado :  </h1>
+
+</div>
+
+
+</div>
+    <div class="container d-flex flex-column">
+        <h1 class="page-section-heading text-uppercase text-secondary mb-0" > [{{videojuegos.name}}]
+          
+            
+          
+          
+            
+            
+        </h1>
+        <h2 class="page-section-heading text-uppercase text-secondary mb-0"> Clasificacion por edad: ({{videojuegos.pegi}})
+          {% if user.is_authenticated  %}{% if user.is_staff %}
+
+         <a class="btn btn-primary" href="{% url 'videojuegos_update' pk=videojuegos.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-primary" href="{% url 'videojuegos_delete' pk=videojuegos.pk %}">Eliminar    <span class="glyphicon glyphicon-trash"></span></a>
+          
+        
+          {% else %}{% endif %}{% else %}{% endif %}
+        </h2>
+
+        <div class="col-md-8" style="margin-top: 5%;">
+
+        <br>
+          <p class="texto">{{videojuegos.summary}}</p>
+        <br>
+        </div>
+        
+
+    </div>
+</header>
+
+
+
+
+{% endblock %}

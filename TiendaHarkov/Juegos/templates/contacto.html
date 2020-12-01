@@ -1,0 +1,112 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+        <style >
+          
+      
+          input {
+              float: left;
+              width: 0px;
+              margin-bottom: 10px;
+          }
+      
+          label {
+              clear: both;
+              float: left;
+              width: 180px;
+          }
+      
+          button {
+              clear: both;
+              float: left;
+              width: 70px;
+          }
+      
+          .error-control {
+              border: 1px solid red;
+          }
+      
+          label.error {
+              color: red;
+              width: 300px;
+              font-size: 0.8em;
+              margin-top: -5px;
+              margin-bottom: 10px;
+          }      
+        </style>
+      <script>
+          $(function() 
+          {
+            $("#mi-formulario").validate({
+                 rules: {                        
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        nom: "required",
+                        pedi: "required",
+                        fecha: "required",
+                        comment: "required"   
+                    }, //rules
+                messages: {
+                    nom:{
+                        required:'Ingrese su nombre'
+                    },
+                    email: {
+                        required: 'Ingresa tu correo electrónico',
+                        email: 'Formato de correo no válido'
+                    },
+                    pedi:{
+                        required: 'Ingrese su número de pedido',
+                        minlength: 'Cantidad de digitos insuficiente',
+                        maxlength: 'Cantidad de digitos superable'
+                    },
+                    comment:{
+                        required:'Escriba su comentario'
+                    }
+                }//messages
+            }); //$('#mi-formulario').validate
+        }); //function    
+      </script> 
+    <div class="container">
+        <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+          <h1>Tienda Harkov</h1>      
+          <p>Venta de juegos de steam en formato digital a un precio economico.</p>
+          <hr>
+          <h2>Contacto</h2>
+        </div>     
+      </div> 
+      <br>
+      <div class="container">
+          <form id="mi-formulario" action="{% url 'index' %}">
+              <label>Nombre Completo: </label>
+              <input type="text" class="form-control" name="nom" required placeholder="nombre completo">   
+              <label>Correo Electrónico: </label>
+              <input type="text" class="form-control" name="email" required placeholder="nombre@dominio.cl">               
+              <label>Numero de Pedido: </label>
+              <input type="number" class="form-control" name="pedi" minlength="9" maxlength="9" required placeholder="Ingrese numero de pedido">                                  
+              <label for="comment">Mensaje:</label>
+              <textarea class="form-control" rows="5" name="comment" required placeholder="Ingrese Comentario"></textarea>               
+              <label for="comment">Comprobante:</label>
+              <input type="file" class="form-control-file border"> 
+              <br><br>     
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <br><br><br>
+              <a class="btn btn-primary" href="{% url 'videojuegos_create' %}">Sugerencia </a>
+              <br><br>
+              <a class="btn btn-primary" href="{% url 'videojuegos' %}">Lista </a>
+              
+          </form>
+
+    
+      </div>
+      <br><br>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}
+

@@ -1,0 +1,203 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+      <h1>Tienda Harkov</h1>      
+      <p>Venta de juegos de steam en formato digital a un precio economico.</p>
+      <hr>
+      <h2>Juegos de Steam</h2>
+    </div>     
+  </div>
+  {% load static %}
+
+  <div class="container">   
+      <div class="row">       
+          <div class="col-md">        
+            <div class="card">
+              
+              <img class="card-img-top" src="{% static 'img/fall1.jpg' %}" >            
+              <div class="card-body">
+                <h4 class="card-title">Fall Guys</h4>
+                <hr>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Añadir al carro</a>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <div class="modal-header">
+                        <h4 class="modal-title">Carro de compras</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <div class="modal-body">
+                        Agregado correctamente...
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <a href="{% url 'fallguys' %}" class="btn btn-info">Ver mas</a>
+              </div>
+            </div>          
+          </div>
+  
+          <div class="col-md">        
+            <div class="card">
+              <img class="card-img-top" src="{% static 'img/red1.jpg' %}"> 
+              <div class="card-body">
+                <h4 class="card-title">RDR 2</h4>
+                  <hr>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Añadir al carro</a>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <div class="modal-header">
+                        <h4 class="modal-title">Carro de compras</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <div class="modal-body">
+                        Agregado correctamente...
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <a href="{% url 'red' %}" class="btn btn-info">Ver mas</a>
+              </div>                       
+            </div>          
+          </div>
+
+          <div class="col-md">        
+              <div class="card">
+                  <img class="card-img-top" src="{% static 'img/new1.jpg' %}">
+                  <div class="card-body">
+                      <h4 class="card-title">New World</h4>
+                      <hr>
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Añadir al carro</a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            <div class="modal-header">
+                              <h4 class="modal-title">Carro de compras</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <div class="modal-body">
+                              Agregado correctamente...
+                            </div>
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <a href="" class="btn btn-info">Ver mas</a>
+                  </div>                        
+              </div>          
+          </div>
+
+          <div class="col-md">        
+              <div class="card">
+                  <img class="card-img-top" src="{% static 'img/among1.jpg' %}">
+                  <div class="card-body">
+                      <h4 class="card-title">Among Us</h4>
+                      <p class="card-text">
+                      <hr>
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Añadir al carro</a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            <div class="modal-header">
+                              <h4 class="modal-title">Carro de compras</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <div class="modal-body">
+                              Agregado correctamente...
+                            </div>
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <a href="" class="btn btn-info">Ver mas</a>
+                  </div>                        
+              </div>          
+          </div>
+
+          <div class="col-md">        
+              <div class="card">
+                  <img class="card-img-bottom" src="{% static 'img/rust1.jpg' %}"> 
+                  <div class="card-body">
+                      <h4 class="card-title">Rust</h4>
+                      <hr>
+                      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Añadir al carro</a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            <div class="modal-header">
+                              <h4 class="modal-title">Carro de compras</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <div class="modal-body">
+                              Agregado correctamente...
+                            </div>
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <a href="" class="btn btn-info">Ver mas</a>
+                  </div>                       
+              </div>          
+          </div>
+        
+      </div>
+  </div>
+  <br>
+  <div class="container">                  
+    <ul class="pagination justify-content-center" style="margin:20px 0">
+      <li class="page-item"><a class="page-link text-info" href="{% url 'steam' %}">Anterior</a></li>
+      <li class="page-item"><a class="page-link text-info" href="{% url 'steam' %}">1</a></li>
+      <li class="page-item"><a class="page-link text-info" href="{% url 'steam' %}">2</a></li>
+      <li class="page-item"><a class="page-link text-info" href="{% url 'steam' %}">Siguente</a></li>
+    </ul>
+  </div>
+  <br>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}

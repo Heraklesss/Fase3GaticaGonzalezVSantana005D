@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+      <h1>Tienda Harkov</h1>      
+      <p>Venta de juegos de forma digitales en diferentes plataformas a un precio economico.</p>
+    </div>     
+  </div>
+  <div class="container"> 
+
+<section class="page-section masthead" id="contact">
+
+    <div class="container">
+
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0 " style="font-size:50px;"> Juego </h2>
+
+
+
+
+        <br>
+    <form method="POST" class="post-form" >{% csrf_token %}
+        
+        <div type="text" class="form-control" name="nom" required placeholder="nombre completo"">
+            {{ form.as_p }}
+        </div>
+        <br><br><br><br>
+        <button type="submit" class="save btn btn-primary btn-xl" style="float: right;">Guardar</button>
+        <button onClick="javascript:history.go(-1)" class="btn btn-primary btn-xl" style="float:left;" >Atrás</button>
+        <br><br>
+        
+    </form>
+    
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

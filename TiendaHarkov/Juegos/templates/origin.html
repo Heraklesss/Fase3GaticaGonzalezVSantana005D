@@ -1,0 +1,121 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<br>
+{% load static %}
+        <div class="container">
+          <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+            <h1>Tienda Harkov</h1>      
+            <p>Venta de juegos de origin en formato digital a un precio economico.</p>
+            <hr>
+            <h2>Juegos de Origin</h2>
+          </div>     
+        </div> 
+
+        <div class="container">   
+            <div class="row">       
+              <div class="col-md">        
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'img/fifa1.jpg' %}">            
+                    <div class="card-body">
+                      <h4 class="card-title">Fifa 21</h4>
+                      <p class="card-text">"Venced en equipo en EA SPORTS™ FIFA 21, con el motor Frostbite™. FIFA 21 ofrece más formas de jugar que nunca, incluyendo la UEFA Champions League y la CONMEBOL Libertadores. No os perdáis las próximas noticias. </p>
+                      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Comprar</a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">                                                  
+                            <div class="modal-header">
+                              <h4 class="modal-title">Compra</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>                                                      
+                            <div class="modal-body">
+                              Comprado correctamente...
+                            </div>                                                       
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>                         
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>          
+              </div>
+        
+              <div class="col-md">        
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'img/heat1.jpg' %}"> 
+                    <div class="card-body">
+                      <h4 class="card-title">Need for speed heat</h4>
+                      <p class="card-text">No pares por el día y arriésgalo todo por la noche en Need for Speed™ Heat Deluxe Edition, un juego de carreras callejeras dinámico donde los límites de la ley se desvanecen cuando empieza a anochecer. </p>
+                      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Comprar</a>
+                      
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            
+                            <div class="modal-header">
+                              <h4 class="modal-title">Compra</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            
+                            <div class="modal-body">
+                              Comprado correctamente...
+                            </div>
+                            
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>                       
+                  </div>          
+              </div>
+
+              <div class="col-md">        
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'img/btf1.jpg' %}">
+                  <div class="card-body">
+                    <h4 class="card-title">Battlefield 5</h4>
+                    <p class="card-text">Accede con un arsenal descomunal y ponte al día con todas las armas y vehículos de los capítulos del primer año de Battlefield™ V. </p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Comprar</a>
+                    
+                    <div class="modal" id="myModal">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                        
+                          
+                          <div class="modal-header">
+                            <h4 class="modal-title">Compra</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          
+                          
+                          <div class="modal-body">
+                            Comprado correctamente...
+                          </div>
+                          
+                          
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>                        
+                </div>          
+            </div>
+              
+          </div>
+          </div>
+          <br><br><br>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}

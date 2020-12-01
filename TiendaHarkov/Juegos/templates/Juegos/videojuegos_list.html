@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+    <h1>Tienda Harkov</h1>      
+    <p>Venta de juegos de forma digitales en diferentes plataformas a un precio economico.</p>
+  </div>     
+</div>
+<div class="container"> 
+  
+<div class="container">
+    <h1 class="page-section-heading text-uppercase text-secondary mb-0" >Lista De Los VideoJuegos: </h1>
+    <br>
+
+    {% if videojuegos_list %}
+    <ul>
+
+      {% for videojuegos in videojuegos_list %}
+      <li>
+        <a  style="font-size: 30px ;" style="color: #5FB8BD;" href="{{ videojuegos.get_absolute_url }}"  >{{ videojuegos.name }}</a> <a style="font-size: 30px;"> -- Clasificación por edad: </a> <a style="font-size: 30px ;" style="color:red;">({{videojuegos.pegi}})</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>No hay Juegos agregados.</p>
+    {% endif %}   
+    <br><br>   
+    
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Juegos Digitales</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"> 
+        <link href="{% static 'css/estilos.css' %} " rel="stylesheet">
+        <link rel="icon" type="image/png" href="{% static 'img/mifavicon.jpg' %}">
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-light bg-info">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+                  <span class="navbar-toggler-icon"></span>
+                </button>               
+                <!-- logo -->
+                <a class="navbar-brand" href="{% url 'index' %}">                   
+                    <img src="{% static 'img/foto.jpg' %}" width="30" height="30" alt="">
+                </a>                
+                <!-- enlaces -->
+                <div class="collapse navbar-collapse" id="opciones">   
+                  <ul class="navbar-nav">
+                    <li class="nav-item">                  
+                      <a class="nav-link text-white" href="{% url 'steam' %}">Juegos Steam</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'origin' %}">Juegos Origin</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'wallet2' %}">Steam Wallet</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'preguntas' %}">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'contacto' %}">Contacto</a>
+                    </li>            
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0 ml-auto" action="{% url 'index' %}">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Ingrese Busqueda">
+                    <button class="btn btn-success mr-sm-2" type="submit">Buscar</button>
+                  </form>
+                </div>
+                </div>
+              </nav>
+        </header>
+        <br>
+        {% block content %}
+
+
+
+        {% endblock %}
+        <footer class="page-footer font-small teal pt-4" style="background-color:#17a2b8">
+            <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                <h5 class="text-uppercase font-weight-bold text-center text-white">Numero Telefónico</h5>
+                <p class="text-center text-white">WhatsApp: +569 56341739</p>      
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">      
+                <div class="col-md-6 mb-md-0 mb-3">      
+                <h5 class="text-uppercase font-weight-bold text-center text-white">Contacto</h5>
+                <p class="text-center text-white">Correo: haarkoov@gmail.com</p>     
+                </div>    
+            </div>
+            <hr>
+            </div> 
+            <div class="footer-copyright text-center py-3">© 2020 Copyright
+            </div>      
+        </footer>
+        
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+>
+<div class="container">
+  <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+    <h1>Tienda Harkov</h1>
+    <p>INICIO DE SESION.</p>
+  </div>
+
+
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Inicio Sesion</button>
+</form>
+
+</div>
+<br>
+{% endblock %}

@@ -1,0 +1,62 @@
+{%extends "base_generic.html"%}
+
+{%block content%}
+<header class="masthead">
+    <br>
+<div class="container">
+  <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+    <h1>Tienda Harkov</h1>      
+    <p>Venta de juegos de forma digitales en diferentes plataformas a un precio economico.</p>
+  </div>     
+</div>
+<div class="container">
+                      
+    
+            
+                     
+    
+            <div class="page-section portfolio container page-section-heading text-uppercase text-secondary mb-0 text-center ">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Borrar VideoJuego</h2>
+                
+                    <!-- Icon Divider -->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                    
+                <br>
+                <center>
+                
+                <h3>¿Estás seguro de borrar este VideoJuego?</h3>
+                <br>
+                <br>
+                <h4>Nombre: </h4> <p class="texto text-center"  > {{ videojuegos.name }}</p>
+                <br>
+                
+    
+                <br>
+    
+                <form action="" method="POST">
+                    {% csrf_token %}
+                 <div style="width: 50%;">
+                    <a href="{% url 'videojuegos-detail' videojuegos.pk %}"class="btn btn-primary btn-xl" style="float: left;">Atras</a>
+                    
+                    <button type="submit" class="save btn btn-primary btn-xl" style="float: right;">Borrar</button>
+                    
+                 </div>
+                 
+                </form>
+                
+                
+                </center>
+            </div>
+            <br><br><br>
+
+           
+</header>    
+        
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<br>
+        <div class="container">
+            <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+              <h1>Tienda Harkov</h1>      
+              <p>Venta de juegos de steam en formato digital a un precio economico.</p>
+              <hr>
+              <h2>Preguntas Frecuentes</h2>
+            </div>     
+          </div>  
+        <br>
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <br>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header">
+                  <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    1. ¿Qué email debo utilizar al transferir?
+                  </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                  <div class="card-body">
+                    Debes utilizar el email "compras.tienda@gmail.com" o "contacto@tienda.cl". En caso de que lo escribas mal o no lo escribas, tu pedido puede tardar hasta 24 horas adicionales.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    2. ¿Qué comentario/asunto debo utilizar al transferir?
+                </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                    Debes escribir "TiendaHarkov #Nº de Pedido" Ejemplo: TiendaHarkov #25000. No ingresar esta información, o ingresarla de manera erronea puede resultar en una demora de hasta 24 horas extras en la verificación del pago.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                    3. ¿Cómo saber si un producto tiene stock?
+                  </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                    Si la página deja agregar el producto al carrito, significa que hay stock, si no hay stock, el producto dirá 'Agotado' y la página no dejara comprarlo.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br><br><br><br>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+{% endblock %}

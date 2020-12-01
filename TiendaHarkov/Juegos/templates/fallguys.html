@@ -1,0 +1,62 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<br>
+{% load static %}
+        <div class="container">
+          <div class="jumbotron text-white font-italic text-center" style="background-color:#17a2b8" >
+            <h1>Tienda Harkov</h1>      
+            <p>Venta de juegos de steam en formato digital a un precio economico.</p>
+            <hr>
+            <h2>Juegos de Steam</h2>
+          </div>     
+        </div>
+        <div class="container">   
+            <h1>Fall Guys</h1>
+            <div class="row">       
+              <div class="col-md">        
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'img/fall.jpg' %}">            
+                    <div class="card-body">
+                      <h4 class="card-title">7.500 CLP</h4>
+                      <p class="card-text">Fall Guys es un juego multijugador masivo tipo party con hasta 60 jugadores online en un enfrentamiento todos contra todos que se desarrolla ronda tras ronda entre un caos creciente hasta que solo queda un único vencedor. </p>
+                      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Comprar</a>
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            
+                            <div class="modal-header">
+                              <h4 class="modal-title">Compra</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            
+                            <div class="modal-body">
+                              Comprado correctamente...
+                            </div>
+                            
+                            
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>          
+              </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container" style="background-color:#17a2b8">
+          <h1>Instrucciones</h1> 
+          <p>Dirigiendote al siguente enlace puedes canjear los codigo en tu cuenta de steam:</p> <a href="https://store.steampowered.com/account/redeemwalletcode.">Canjear Codigo</a>
+        </div> 
+        <br>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}
