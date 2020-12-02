@@ -8,7 +8,7 @@ class GameTestCase(TestCase):
     @classmethod
 
     def setUpTestData(cls):
-        test_juego = videojuegos.objects.create(name='COD',pegi='p18')
+        videojuegos.objects.create(name='COD',pegi='p18')
 
     def test_name_label(self):
         juego=videojuegos.objects.get(id=1)
@@ -32,4 +32,4 @@ class GameTestCase(TestCase):
 
     def test_get_absolute_url(self):
         juego=videojuegos.objects.get(id=1)
-        self.assertEquals(game.get_absolute_url(), '/Juegos/game/1')
+        self.assertEquals(juego.get_absolute_url(), '/Juegos/game/1')
